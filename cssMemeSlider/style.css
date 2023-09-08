@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+  background-color: #393939;
+}
+.container {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.wrapper {
+  margin: 1rem;
+  overflow: hidden;
+}
+.meme__photo {
+  display: flex;
+}
+
+.meme__photo img {
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.descr__wrapper {
+  max-height: 30rem;
+  height: 100%;
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.meme__descr {
+  max-width: 45rem;
+  width: 100%;
+  color: white;
+}
+.overflow {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.overflow .descr {
+  min-width: 45rem;
+}
+
