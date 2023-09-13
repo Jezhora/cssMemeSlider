@@ -3,48 +3,69 @@
 	padding: 0;
 	margin: 0;
 }
-
 body {
-  background-color: #393939;
+  background-color: rgb(73, 73, 73);
+}
+.all__buttons {
+  display: none;
 }
 .container {
-  max-width: 1024px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 64rem;
+  width: 96%;
   margin: 0 auto;
-}
-.wrapper {
-  margin: 1rem;
-  overflow: hidden;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column-reverse;
 }
 .meme__photo {
+  width: 100%;
   display: flex;
+  overflow: hidden;
 }
-
 .meme__photo img {
   width: 100%;
   border-radius: 0.7rem;
 }
 
-.descr__wrapper {
-  max-height: 30rem;
-  height: 100%;
-  margin: 1em;
+.meme__descr {
   display: flex;
   justify-content: space-between;
-}
-.meme__descr {
-  max-width: 45rem;
-  width: 100%;
   color: white;
 }
+.wrapper {
+  width: 100%;
+  flex-basis: 80%;
+}
 .overflow {
+  width: 40rem;
   display: flex;
-  white-space: nowrap;
   overflow: hidden;
 }
-.overflow .descr {
-  min-width: 45rem;
+.descr {
+  width: 58rem;
+  margin-left: 0.3rem;
+  flex-shrink: 0;
+  height: 2rem;
 }
 
+.controls {
+  width: 100%;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.2rem;
+}
+.passive {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  /* background-color: rgb(73, 73, 73); */
+  background-color: white;
+  border: solid white 0.1rem;
+}
+.passive:hover {
+  cursor: pointer;
+  border: solid white 0.1rem;
+  background-color:rgb(73, 73, 73);
+}
