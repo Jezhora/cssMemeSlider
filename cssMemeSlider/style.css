@@ -5,6 +5,7 @@
 }
 body {
   background-color: #3a3a3a;
+  font-family: 'Roboto', sans-serif;
 }
 .slider {
   max-width: 64rem;
@@ -48,21 +49,21 @@ body {
   justify-content: flex-end;
 }
 .buttons label {
-  padding: 0.4rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 .buttons label > div {
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.9rem;
+  height: 0.9rem;
 	background: #faf9f9;
 	border-radius: 100%;
 } 
-.buttons label:hover > div{
+.buttons label:hover div{
   background: #fd02e0;
 	border: solid  #fd02e0 0.1rem;
 }
-.buttons label:active > div{
-  background: #03fbc5;
+.buttons label:active div{
+  background: #4503fb;
 }
 
 .overflow {
@@ -70,11 +71,11 @@ body {
   color: white;
   display: flex;
   flex-direction: row;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   overflow: hidden;
 }
 .descr {
-  min-width: 64rem;
+  min-width: 100%;
   transition: transform 0.5s ease-in-out;
   transform: translate(100%);
 }
@@ -87,10 +88,10 @@ body {
 	background: #494949;
 	border: solid  #faf9f9 0.1rem;
 }
-#radio1:checked ~ .meme__descr .buttons label:hover > div,
-#radio2:checked ~ .meme__descr .buttons label:hover > div,
-#radio3:checked ~ .meme__descr .buttons label:hover > div,
-#radio4:checked ~ .meme__descr .buttons label:hover > div {
+#radio1:checked ~ .meme__descr .buttons label:hover div,
+#radio2:checked ~ .meme__descr .buttons label:hover div,
+#radio3:checked ~ .meme__descr .buttons label:hover div,
+#radio4:checked ~ .meme__descr .buttons label:hover div {
 	border: solid  #fd02e0 0.1rem;
 }
 
@@ -128,7 +129,7 @@ body {
   }
   .meme__descr {
     flex-direction: column-reverse;
-    gap: 1.8rem;
+    gap: 1rem;
   }
   .meme__descr :nth-child(2) {
     justify-content: center;
@@ -136,10 +137,5 @@ body {
   .descr {
     transition: transform 0.5s ease-in-out;
     transform: translate(150%);
-  }
-}
-@media screen and (max-width: 470px) {
-  .descr {
-    min-width: 20rem;
   }
 }
