@@ -6,21 +6,22 @@
 body {
   background-color: #3a3a3a;
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .slider {
   max-width: 64rem;
 	width: 95%;
-	margin: 0 auto;
-	margin-top: 1rem;
 	display: flex;
 	flex-flow: row wrap;
 	gap: 1rem;
 }
-
 .radio-button {
   display: none;
 }
-
 .meme__slides {
 	flex-basis: 64rem;
   border-radius: 0.7rem;
@@ -58,14 +59,10 @@ body {
 	background: #faf9f9;
 	border-radius: 100%;
 } 
-.buttons label:hover div{
-  background: #fd02e0;
-	border: solid  #fd02e0 0.1rem;
-}
+
 .buttons label:active div{
   background: #4503fb;
 }
-
 .overflow {
   flex-basis: 80%;
   color: white;
@@ -79,8 +76,6 @@ body {
   transition: transform 0.5s ease-in-out;
   transform: translate(100%);
 }
-
-
 #radio1:checked ~ .meme__descr .buttons label:nth-of-type(1) div,
 #radio2:checked ~ .meme__descr .buttons label:nth-of-type(2) div,
 #radio3:checked ~ .meme__descr .buttons label:nth-of-type(3) div,
@@ -88,42 +83,31 @@ body {
 	background: #494949;
 	border: solid  #faf9f9 0.1rem;
 }
-#radio1:checked ~ .meme__descr .buttons label:hover div,
-#radio2:checked ~ .meme__descr .buttons label:hover div,
-#radio3:checked ~ .meme__descr .buttons label:hover div,
-#radio4:checked ~ .meme__descr .buttons label:hover div {
-	border: solid  #fd02e0 0.1rem;
-}
-
 #radio1:checked ~ .meme__slides .meme__photos {
   transform: translateX(0);
 }
-
 #radio1:checked ~ .meme__descr .overflow :nth-of-type(1) {
   transform: translateX(0);
 }
-
 #radio2:checked ~ .meme__slides .meme__photos {
   transform: translateX(-100%);
 }
 #radio2:checked ~ .meme__descr .overflow :nth-of-type(2) {
   transform: translateX(-100%);
 }
-
 #radio3:checked ~ .meme__slides .meme__photos {
   transform: translateX(-200%);
 }
 #radio3:checked ~ .meme__descr .overflow :nth-of-type(3) {
   transform: translateX(-200%);
 }
-
 #radio4:checked ~ .meme__slides .meme__photos {
   transform: translateX(-300%);
 }
 #radio4:checked ~ .meme__descr .overflow :nth-of-type(4) {
   transform: translateX(-300%);
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .meme__slides {
     gap: 1rem;
   }
@@ -141,10 +125,16 @@ body {
   .overflow {
     font-size: 1rem;
   }
+}
+@media (hover: hover) {
+  .buttons label:hover div{
+    background: #fd02e0;
+    border: solid  #fd02e0 0.1rem;
+  }
   #radio1:checked ~ .meme__descr .buttons label:hover div,
   #radio2:checked ~ .meme__descr .buttons label:hover div,
   #radio3:checked ~ .meme__descr .buttons label:hover div,
   #radio4:checked ~ .meme__descr .buttons label:hover div {
-	border: solid  white 0.1rem;
+    border: solid  #fd02e0 0.1rem;
   }
 }
