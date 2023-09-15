@@ -53,8 +53,8 @@ body {
   cursor: pointer;
 }
 .buttons label > div {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.8rem;
+  height: 0.8rem;
 	background: #faf9f9;
 	border-radius: 100%;
 } 
@@ -137,5 +137,14 @@ body {
   .descr {
     transition: transform 0.5s ease-in-out;
     transform: translate(150%);
+  }
+  .overflow {
+    font-size: 1rem;
+  }
+  #radio1:checked ~ .meme__descr .buttons label:hover div,
+  #radio2:checked ~ .meme__descr .buttons label:hover div,
+  #radio3:checked ~ .meme__descr .buttons label:hover div,
+  #radio4:checked ~ .meme__descr .buttons label:hover div {
+	border: solid  white 0.1rem;
   }
 }
