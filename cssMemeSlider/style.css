@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	background-color: #3a3a3a;
+}
+.slider {
+  max-width: 64rem;
+	width: 95%;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1rem;
+}
+.radio-button {
+  display: none;
+}
+.meme__slides {
+	flex-basis: 64rem;
+  border-radius: 0.7rem;
+	overflow: hidden;
+  box-shadow: 0.4rem 0.6rem 0.4rem rgba(0, 0, 0, 0.2); 
+}
+.meme__photos {
+	width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.meme__photos img{
+	width: 100%;
+}
+.slide {
+  flex: 0 0 100%;
+}
+.meme__descr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+.buttons label {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.buttons label > div {
+  width: 0.8rem;
+  height: 0.8rem;
+	background: #faf9f9;
+	border-radius: 100%;
+} 
+.overflow {
+  flex-basis: 80%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+.descr {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(100%);
+}
+#radio1:checked ~ .meme__descr .buttons label:nth-of-type(1) div,
+#radio2:checked ~ .meme__descr .buttons label:nth-of-type(2) div,
+#radio3:checked ~ .meme__descr .buttons label:nth-of-type(3) div,
+#radio4:checked ~ .meme__descr .buttons label:nth-of-type(4) div{
+	background: #494949;
+	border: solid  #faf9f9 0.1rem;
+}
+#radio1:checked ~ .meme__slides .meme__photos {
+  transform: translateX(0);
+}
+#radio1:checked ~ .meme__descr .overflow :nth-of-type(1) {
+  transform: translateX(0);
+}
+#radio2:checked ~ .meme__slides .meme__photos {
+  transform: translateX(-100%);
+}
+#radio2:checked ~ .meme__descr .overflow :nth-of-type(2) {
+  transform: translateX(-100%);
+}
+#radio3:checked ~ .meme__slides .meme__photos {
+  transform: translateX(-200%);
+}
+#radio3:checked ~ .meme__descr .overflow :nth-of-type(3) {
+  transform: translateX(-200%);
+}
+#radio4:checked ~ .meme__slides .meme__photos {
+  transform: translateX(-300%);
+}
+#radio4:checked ~ .meme__descr .overflow :nth-of-type(4) {
+  transform: translateX(-300%);
+}
+@media (max-width: 768px) {
+  .meme__slides {
+    gap: 1rem;
+  }
+  .meme__descr {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .meme__descr :nth-child(2) {
+    justify-content: center;
+  }
+  .descr {
+    transition: transform 0.5s ease-in-out;
+    transform: translate(150%);
+  }
+  .overflow {
+    font-size: 1rem;
+  }
+}
+@media (hover: hover) {
+  .buttons label:hover div{
+    background: #fd02e0;
+    border: solid  #fd02e0 0.1rem;
+  }
+  #radio1:checked ~ .meme__descr .buttons label:hover div,
+  #radio2:checked ~ .meme__descr .buttons label:hover div,
+  #radio3:checked ~ .meme__descr .buttons label:hover div,
+  #radio4:checked ~ .meme__descr .buttons label:hover div {
+    border: solid  #fd02e0 0.1rem;
+  }
+}
+.buttons label:active div{
+  background: #03fbfb;
+}
